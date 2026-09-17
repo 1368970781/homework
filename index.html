@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0F0E0E">
+<meta name="description" content="兰西彭氏灯彩 · 黑土地上的光影非遗 · 数字交互毕业设计">
+<title>兰西彭氏灯彩 · 黑土地上的光影非遗</title>
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700;900&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20260911-1712">
+</head>
+<body>
+<div id="app">
+
+<!-- ==================== 顶部固定导航 ==================== -->
+<nav class="top-nav" id="topNav" aria-label="主导航">
+  <a class="nav-brand" href="#scene-vision" data-scene="0" aria-label="回到首页">
+    <div class="nav-seal"><span>彭</span></div>
+    <span class="nav-brand-text">兰西彭氏灯彩</span>
+  </a>
+
+  <button class="nav-mobile-toggle" id="navMobileToggle" aria-label="展开导航" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="nav-menu" id="navMenu">
+    <a class="nav-item nav-item-active" href="#scene-vision" data-scene="0"><span>灯彩幻境</span><span class="nav-dot" aria-hidden="true"></span></a>
+    <a class="nav-item nav-item-default" href="#scene-origin" data-scene="1"><span>灯彩溯源</span></a>
+    <a class="nav-item nav-item-default" href="#scene-craft" data-scene="2"><span>工艺拆解</span></a>
+    <a class="nav-item nav-item-default" href="#scene-gallery" data-scene="3"><span>作品展厅</span></a>
+    <a class="nav-item nav-item-default" href="#scene-maker" data-scene="4"><span>光影创作</span></a>
+    <a class="nav-item nav-item-default" href="#scene-heritage" data-scene="5"><span>传承展望</span></a>
+  </div>
+
+  <div class="nav-meta">
+    <span class="nav-progress" id="navProgress">01 / 06</span>
+    <span class="nav-divider" aria-hidden="true"></span>
+    <span class="nav-chapter" id="navChapter">卷首</span>
+  </div>
+</nav>
+
+<main>
+
+<!-- ==================== 1. 首页·灯彩幻境 ==================== -->
+<section class="scene-vision" id="scene-vision" aria-labelledby="vision-title">
+  <picture class="vision-bg">
+    <source srcset="images/hero-dragon-3840.webp?v=20260911-1558 3840w, images/hero-dragon-3200.webp?v=20260911-1558 3200w, images/hero-dragon-2560.webp?v=20260911-1558 2560w, images/hero-dragon-1920.webp?v=20260911-1558 1920w" type="image/webp" sizes="100vw">
+    <source srcset="images/hero-dragon-3840.jpg?v=20260911-1558 3840w, images/hero-dragon-3200.jpg?v=20260911-1558 3200w, images/hero-dragon-2560.jpg?v=20260911-1558 2560w, images/hero-dragon-1920.jpg?v=20260911-1558 1920w" type="image/jpeg" sizes="100vw">
+    <img src="images/hero-dragon-1920.jpg?v=20260911-1558" alt="彭氏灯彩龙灯会：巨型龙形彩灯盘绕传统牌楼，烟火与锦鲤灯交相辉映" loading="eager" fetchpriority="high">
+  </picture>
+
+  <!-- 孔明灯漂浮动画层 -->
+  <div class="sky-lanterns" aria-hidden="true">
+    <svg class="sky-lantern-svg" viewBox="0 0 1920 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="sl-glow" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0%" stop-color="#FFE4A8" stop-opacity="0.95"/>
+          <stop offset="35%" stop-color="#E8C268" stop-opacity="0.55"/>
+          <stop offset="100%" stop-color="#E8C268" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="sl-glow-warm" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0%" stop-color="#FFC78A" stop-opacity="0.85"/>
+          <stop offset="40%" stop-color="#C8102E" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="#C8102E" stop-opacity="0"/>
+        </radialGradient>
+        <symbol id="sky-lantern" viewBox="-12 -16 24 32">
+          <ellipse cx="0" cy="0" rx="6" ry="8" fill="#F5E6C8" opacity="0.85"/>
+          <path d="M -5 -2 L 5 -2 L 4 4 L -4 4 Z" fill="#C8102E" opacity="0.45"/>
+          <line x1="0" y1="8" x2="0" y2="14" stroke="#7A7672" stroke-width="0.5" opacity="0.4"/>
+        </symbol>
+      </defs>
+      <g class="lantern-layer lantern-layer-far">
+        <g class="lantern lantern-1"><circle r="14" fill="url(#sl-glow)"/><use href="#sky-lantern" x="-3" y="-4" width="6" height="8"/></g>
+        <g class="lantern lantern-2"><circle r="12" fill="url(#sl-glow-warm)"/><use href="#sky-lantern" x="-3" y="-4" width="6" height="8"/></g>
+        <g class="lantern lantern-3"><circle r="16" fill="url(#sl-glow)"/><use href="#sky-lantern" x="-3.5" y="-5" width="7" height="9"/></g>
+        <g class="lantern lantern-4"><circle r="10" fill="url(#sl-glow)"/></g>
+        <g class="lantern lantern-5"><circle r="13" fill="url(#sl-glow-warm)"/><use href="#sky-lantern" x="-3" y="-4" width="6" height="8"/></g>
+        <g class="lantern lantern-6"><circle r="11" fill="url(#sl-glow)"/></g>
+        <g class="lantern lantern-7"><circle r="14" fill="url(#sl-glow)"/><use href="#sky-lantern" x="-3" y="-4" width="6" height="8"/></g>
+        <g class="lantern lantern-8"><circle r="9" fill="url(#sl-glow-warm)"/></g>
+      </g>
+      <g class="lantern-layer lantern-layer-mid">
+        <g class="lantern lantern-9"><circle r="22" fill="url(#sl-glow)"/><use href="#sky-lantern" x="-6" y="-8" width="12" height="16"/></g>
+        <g class="lantern lantern-10"><circle r="18" fill="url(#sl-glow-warm)"/><use href="#sky-lantern" x="-5" y="-7" width="10" height="14"/></g>
+        <g class="lantern lantern-11"><circle r="24" fill="url(#sl-glow)"/><use href="#sky-lantern" x="-7" y="-9" width="14" height="18"/></g>
+        <g class="lantern lantern-12"><circle r="20" fill="url(#sl-glow-warm)"/><use href="#sky-lantern" x="-6" y="-8" width="12" height="16"/></g>
+        <g class="lantern lantern-13"><circle r="16" fill="url(#sl-glow)"/><use href="#sky-lantern" x="-5" y="-7" width="10" height="14"/></g>
+      </g>
+    </svg>
+  </div>
+
+  <!-- 鼠标移动交互的灯笼点 -->
+  <div class="mouse-fireflies" id="mouseFireflies" aria-hidden="true"></div>
+
+  <!-- 暗角遮罩 -->
+  <div class="vision-vignette" aria-hidden="true"></div>
+  <div class="vision-text-shade" aria-hidden="true"></div>
+
+  <!-- 文字内容 -->
+  <div class="vision-overlay">
+    <p class="vision-tag">卷首 · OPENING</p>
+    <h1 class="vision-title" id="vision-title">
+      <span class="vt-line-1">兰西彭氏灯彩</span>
+      <span class="vt-divider" aria-hidden="true"></span>
+      <span class="vt-line-2">黑土地上的光影非遗</span>
+    </h1>
+    <p class="vision-sub">一盏灯 · 一段匠 · 一脉情</p>
+    <p class="vision-desc">黑龙江省绥化市兰西县 · 百年彭氏家族灯彩 · 数字交互毕业设计</p>
+
+    <div class="vision-cta">
+      <a class="vision-btn vision-btn-primary" href="#scene-origin">开始浏览 ↓</a>
+      <a class="vision-btn vision-btn-ghost" href="#scene-maker">直接去创作 →</a>
+    </div>
+
+    <p class="vision-hint">· 移动鼠标，画面中灯笼将依次点亮 ·</p>
+  </div>
+</section>
+
+<!-- ==================== 2. 灯彩溯源 ==================== -->
+<section class="scene-origin" id="scene-origin" aria-labelledby="origin-title">
+  <header class="section-header">
+    <span class="section-num">壹</span>
+    <h2 class="section-title" id="origin-title">灯彩溯源 / Origin</h2>
+    <p class="section-desc">黑龙江省兰西县，地处松嫩平原腹地、黑土核心区。彭氏灯彩扎根于此逾百载，以北方乡土之大红大紫，区别于南方花灯之素雅婉约，是东北民俗艺术中独树一帜的存在。</p>
+  </header>
+
+  <!-- 百年脉络 · 横向可拖动时间线 -->
+  <div class="origin-timeline" id="originTimeline">
+    <div class="timeline-meta">
+      <p class="timeline-hint">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M8 5l-5 7 5 7M16 5l5 7-5 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        拖动灯笼手柄，穿越彭氏灯彩百年脉络
+      </p>
+      <p class="timeline-current">当前节点：<span class="timeline-current-year" id="timelineYear">1900s</span><span class="timeline-current-name" id="timelineName">彭氏祖宅·兰西县</span></p>
+    </div>
+    <div class="timeline-lane" id="timelineLane">
+      <div class="timeline-node-info" data-index="0" style="--pos:0%"><span class="tni-year">1900s</span><span class="tni-name">清末民初</span></div>
+      <div class="timeline-node-info" data-index="1" style="--pos:33.333%"><span class="tni-year">1950s</span><span class="tni-name">建国初期</span></div>
+      <div class="timeline-node-info" data-index="2" style="--pos:66.666%"><span class="tni-year">1980s</span><span class="tni-name">改革开放</span></div>
+      <div class="timeline-node-info" data-index="3" style="--pos:100%"><span class="tni-year">2014</span><span class="tni-name">省级非遗</span></div>
+      <div class="timeline-rail" aria-hidden="true"></div>
+      <div class="timeline-fill" id="timelineFill" aria-hidden="true"></div>
+      <div class="timeline-dot" style="--pos:0%" aria-hidden="true"></div>
+      <div class="timeline-dot" style="--pos:33.333%" aria-hidden="true"></div>
+      <div class="timeline-dot" style="--pos:66.666%" aria-hidden="true"></div>
+      <div class="timeline-dot" style="--pos:100%" aria-hidden="true"></div>
+      <div class="timeline-handle" id="timelineHandle" role="slider" tabindex="0"
+           aria-label="历史时间线滑块" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0" aria-valuetext="1900s 彭氏祖宅·兰西县">
+        <img src="images/lantern-handle.png" alt="" draggable="false">
+      </div>
+    </div>
+    <div class="timeline-stops">
+      <button class="timeline-node is-active" type="button" data-index="0"><span class="timeline-node-year">1900s</span><span class="timeline-node-name">彭氏祖宅</span></button>
+      <button class="timeline-node" type="button" data-index="1"><span class="timeline-node-year">1950s</span><span class="timeline-node-name">第二代传人</span></button>
+      <button class="timeline-node" type="button" data-index="2"><span class="timeline-node-year">1980s</span><span class="timeline-node-name">东北花灯会</span></button>
+      <button class="timeline-node" type="button" data-index="3"><span class="timeline-node-year">2014</span><span class="timeline-node-name">省级非遗</span></button>
+    </div>
+  </div>
+
+  <div class="origin-grid">
+    <article class="origin-card origin-feature">
+      <div class="origin-card-photo" data-photo="彭氏祖宅·兰西县">
+        <svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs><linearGradient id="og1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3A1818"/><stop offset="100%" stop-color="#0F0E0E"/></linearGradient></defs>
+          <rect width="400" height="240" fill="url(#og1)"/>
+          <rect x="0" y="160" width="400" height="80" fill="#1F1815" opacity="0.6"/>
+          <polygon points="60,160 100,140 140,160" fill="#C8102E"/>
+          <rect x="80" y="160" width="40" height="60" fill="#2A1410"/>
+          <circle cx="200" cy="120" r="35" fill="#C8102E"/>
+          <rect x="190" y="115" width="20" height="10" fill="#E8C268"/>
+          <polygon points="280,160 320,130 360,160" fill="#C8102E"/>
+          <rect x="300" y="160" width="40" height="60" fill="#2A1410"/>
+          <circle cx="100" cy="80" r="6" fill="#F5E6C8" opacity="0.6"/>
+          <circle cx="180" cy="60" r="5" fill="#F5E6C8" opacity="0.5"/>
+          <circle cx="320" cy="70" r="6" fill="#F5E6C8" opacity="0.6"/>
+        </svg>
+        <span class="origin-card-caption">悬停查看注解</span>
+      </div>
+      <div class="origin-card-body">
+        <span class="origin-card-num">1900s —</span>
+        <h3 class="origin-card-name">彭氏祖宅·兰西县</h3>
+        <p class="origin-card-text">清末民初，彭氏先祖在兰西县城开设灯坊，从最初为庙会、婚丧嫁娶扎制灯笼，到逐步形成「彭记灯彩」字号。历经四代传承，已逾百年。</p>
+      </div>
+    </article>
+
+    <article class="origin-card">
+      <div class="origin-card-photo" data-photo="第二代传人·彭福临">
+        <svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="400" height="240" fill="#1A1410"/>
+          <circle cx="200" cy="120" r="55" fill="#3A2820"/>
+          <ellipse cx="200" cy="180" rx="80" ry="60" fill="#5A2820"/>
+          <rect x="120" y="170" width="160" height="70" fill="#3A1815"/>
+          <circle cx="180" cy="115" r="3" fill="#0F0E0E"/>
+          <circle cx="220" cy="115" r="3" fill="#0F0E0E"/>
+        </svg>
+        <span class="origin-card-caption">悬停查看注解</span>
+      </div>
+      <div class="origin-card-body">
+        <span class="origin-card-num">1950s</span>
+        <h3 class="origin-card-name">第二代传人·彭福临</h3>
+        <p class="origin-card-text">新中国成立后，彭福临将传统灯彩带入合作社，组织集体生产。这一时期的「庆丰收」「大生产」主题灯组，奠定了彭氏灯彩的政治叙事与民间叙事双线并行的特征。</p>
+      </div>
+    </article>
+
+    <article class="origin-card">
+      <div class="origin-card-photo" data-photo="东北花灯会·1980s">
+        <svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="400" height="240" fill="#0F0E0E"/>
+          <circle cx="80" cy="180" r="40" fill="#C8102E"/>
+          <circle cx="160" cy="190" r="32" fill="#E8C268"/>
+          <circle cx="240" cy="175" r="45" fill="#C8102E"/>
+          <circle cx="320" cy="195" r="36" fill="#E8C268"/>
+          <rect x="78" y="155" width="4" height="20" fill="#5A5652"/>
+          <rect x="158" y="170" width="4" height="20" fill="#5A5652"/>
+          <rect x="238" y="145" width="4" height="20" fill="#5A5652"/>
+          <rect x="318" y="170" width="4" height="20" fill="#5A5652"/>
+        </svg>
+        <span class="origin-card-caption">悬停查看注解</span>
+      </div>
+      <div class="origin-card-body">
+        <span class="origin-card-num">1980s</span>
+        <h3 class="origin-card-name">东北花灯会·1980s</h3>
+        <p class="origin-card-text">改革开放后，兰西灯彩重获新生。彭氏第三代传人彭志远将传统扎制与现代光源结合，让灯彩从白日走向夜晚。</p>
+      </div>
+    </article>
+
+    <article class="origin-card">
+      <div class="origin-card-photo" data-photo="非遗名录·2014">
+        <svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="400" height="240" fill="#141211"/>
+          <rect x="120" y="60" width="160" height="120" fill="#1F1A18" stroke="#C8102E" stroke-width="2"/>
+          <text x="200" y="115" text-anchor="middle" font-family="Noto Serif SC, serif" font-weight="700" font-size="22" fill="#E8C268">非遗</text>
+          <text x="200" y="148" text-anchor="middle" font-family="Noto Serif SC, serif" font-weight="700" font-size="14" fill="#F5EFE6C8">2014</text>
+          <line x1="140" y1="170" x2="260" y2="170" stroke="#E8C268" stroke-width="1"/>
+        </svg>
+        <span class="origin-card-caption">悬停查看注解</span>
+      </div>
+      <div class="origin-card-body">
+        <span class="origin-card-num">2014</span>
+        <h3 class="origin-card-name">非遗名录·黑龙江省级</h3>
+        <p class="origin-card-text">彭氏灯彩正式入选黑龙江省非物质文化遗产代表性项目名录。第四代传人彭悦成立彭氏灯彩传习所，开始系统性整理工艺文献。</p>
+      </div>
+    </article>
+  </div>
+
+  <!-- 南北灯彩对比 -->
+  <div class="origin-compare">
+    <h3 class="compare-title">南北灯彩对比 · 风格差异</h3>
+    <div class="compare-grid">
+      <div class="compare-col compare-north">
+        <div class="compare-flag">北方 · 彭氏</div>
+        <ul class="compare-list">
+          <li><strong>色彩：</strong>大红大紫、暖金朱砂，对比强烈</li>
+          <li><strong>造型：</strong>浑厚饱满、几何方正、立体堆叠</li>
+          <li><strong>题材：</strong>丰收、瑞兽、福寿、神话</li>
+          <li><strong>气质：</strong>浓烈炽热 · 大气磅礴</li>
+        </ul>
+      </div>
+      <div class="compare-vs">VS</div>
+      <div class="compare-col compare-south">
+        <div class="compare-flag">南方 · 自贡/秦淮</div>
+        <ul class="compare-list">
+          <li><strong>色彩：</strong>素雅清淡、粉墙黛瓦</li>
+          <li><strong>造型：</strong>精巧细腻、写意留白</li>
+          <li><strong>题材：</strong>山水、仕女、诗词意境</li>
+          <li><strong>气质：</strong>婉约秀美 · 诗意朦胧</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 3. 灯彩工艺拆解 ==================== -->
+<section class="scene-craft" id="scene-craft" aria-labelledby="craft-title">
+  <header class="section-header">
+    <span class="section-num">贰</span>
+    <h2 class="section-title" id="craft-title">灯彩工艺拆解 / Craft Deconstruction</h2>
+    <p class="section-desc">一盏灯彩的诞生需经五道传统工序。本节以可点击的分步交互演示全过程——像亲手拆解一盏灯，看它如何从柳条骨架蜕变为通电点亮的艺术品。</p>
+  </header>
+
+  <div class="craft-workspace">
+    <!-- 左侧：分步列表 -->
+    <div class="craft-steps" role="tablist" aria-label="工艺步骤">
+      <button class="craft-step is-active" data-step="1" role="tab" aria-selected="true">
+        <span class="cs-num">01</span>
+        <span class="cs-name">扎骨架</span>
+        <span class="cs-en">Binding</span>
+        <span class="cs-tag">柳条 / 铁丝</span>
+      </button>
+      <button class="craft-step" data-step="2" role="tab" aria-selected="false">
+        <span class="cs-num">02</span>
+        <span class="cs-name">裱糊布面</span>
+        <span class="cs-en">Mounting</span>
+        <span class="cs-tag">宣纸 / 绸缎</span>
+      </button>
+      <button class="craft-step" data-step="3" role="tab" aria-selected="false">
+        <span class="cs-num">03</span>
+        <span class="cs-name">手绘纹样</span>
+        <span class="cs-en">Painting</span>
+        <span class="cs-tag">矿物颜料</span>
+      </button>
+      <button class="craft-step" data-step="4" role="tab" aria-selected="false">
+        <span class="cs-num">04</span>
+        <span class="cs-name">组装配饰</span>
+        <span class="cs-en">Assembly</span>
+        <span class="cs-tag">流苏 / 穗子</span>
+      </button>
+      <button class="craft-step" data-step="5" role="tab" aria-selected="false">
+        <span class="cs-num">05</span>
+        <span class="cs-name">内置光源</span>
+        <span class="cs-en">Lighting</span>
+        <span class="cs-tag">LED / 烛火</span>
+      </button>
+    </div>
+
+    <!-- 右侧：示意图 + 说明 -->
+    <div class="craft-view" role="tabpanel" aria-live="polite">
+      <div class="craft-diagram" id="craftDiagram">
+        <!-- 默认 step1: 扎骨架 -->
+        <svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- 底色 -->
+          <circle cx="240" cy="240" r="200" fill="#181614" opacity="0.5"/>
+          <!-- 灯笼轮廓（透明） -->
+          <g class="diag-lantern" id="diagLantern">
+            <!-- 骨架线条 -->
+            <g class="diag-frame" stroke="#C8102E" stroke-width="3" fill="none" stroke-linecap="round">
+              <ellipse cx="240" cy="240" rx="160" ry="120" class="diag-frame-1"/>
+              <line x1="80" y1="240" x2="400" y2="240"/>
+              <line x1="240" y1="120" x2="240" y2="360"/>
+              <ellipse cx="240" cy="160" rx="80" ry="40"/>
+              <ellipse cx="240" cy="320" rx="80" ry="40"/>
+            </g>
+            <!-- 上下盖 -->
+            <g class="diag-cap">
+              <rect x="220" y="100" width="40" height="20" fill="#7A7672"/>
+              <rect x="220" y="360" width="40" height="20" fill="#7A7672"/>
+            </g>
+            <!-- 流苏 -->
+            <g class="diag-tassel" fill="#C8102E">
+              <line x1="240" y1="380" x2="240" y2="420" stroke="#C8102E" stroke-width="2"/>
+              <circle cx="240" cy="425" r="6" fill="#C8102E"/>
+            </g>
+          </g>
+
+          <!-- 内光（默认关闭） -->
+          <g class="diag-light" opacity="0">
+            <circle cx="240" cy="240" r="100" fill="url(#lightGlow)" />
+            <defs>
+              <radialGradient id="lightGlow">
+                <stop offset="0%" stop-color="#FFE4A8" stop-opacity="0.9"/>
+                <stop offset="50%" stop-color="#E8C268" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="#E8C268" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <circle cx="240" cy="240" r="6" fill="#FFE4A8"/>
+          </g>
+
+          <!-- 步骤指示器 -->
+          <g class="diag-step-indicator">
+            <circle cx="80" cy="430" r="8" fill="#C8102E"/>
+            <text x="100" y="435" font-family="Noto Sans SC" font-size="14" fill="#F5E6C8" id="diagStepLabel">步骤 01 · 扎骨架</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="craft-info">
+        <span class="craft-step-tag" id="craftStepTag">步骤 01</span>
+        <h3 class="craft-name" id="craftName">扎骨架</h3>
+        <p class="craft-en" id="craftEn">Binding · 柳条 / 铁丝</p>
+        <p class="craft-desc" id="craftDesc">选用东北本地旱柳条，经水煮、晾干后弯成所需弧度，辅以细铁丝绑扎定型。彭氏祖传「三道扣」绑扎法，可让骨架承重 30 公斤而不变形，是灯彩百年不塌的关键。</p>
+
+        <div class="craft-meta">
+          <div class="cm-item">
+            <span class="cm-label">耗时</span>
+            <span class="cm-value" id="craftTime">2 — 4 小时</span>
+          </div>
+          <div class="cm-item">
+            <span class="cm-label">难度</span>
+            <span class="cm-value" id="craftLevel">★★★★☆</span>
+          </div>
+          <div class="cm-item">
+            <span class="cm-label">工具</span>
+            <span class="cm-value" id="craftTools">柳条 · 铁丝 · 钳</span>
+          </div>
+        </div>
+
+        <button class="craft-next" id="craftNext">下一步 · 裱糊布面 →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- AIGC 创新栏目 -->
+  <div class="craft-aigc">
+    <div class="aigc-badge">AIGC · 毕设创新</div>
+    <h3 class="aigc-title">现代创新：AIGC 辅助设计</h3>
+    <p class="aigc-desc">本毕设创新性地将 AIGC（人工智能生成内容）引入彭氏灯彩设计流程：训练专属的东北民俗纹样扩散模型，输入关键词即可生成符合彭氏家族色彩语言（朱红、暖金）的新纹样草图，再由人工二次创作落地为成品灯彩。</p>
+    <div class="aigc-flow">
+      <div class="af-block"><span class="af-num">01</span><span class="af-text">关键词输入</span><span class="af-sub">"瑞雪 · 锦鲤 · 满洲窗"</span></div>
+      <div class="af-arrow">→</div>
+      <div class="af-block"><span class="af-num">02</span><span class="af-text">AIGC 生成</span><span class="af-sub">Stable Diffusion</span></div>
+      <div class="af-arrow">→</div>
+      <div class="af-block"><span class="af-num">03</span><span class="af-text">人工挑选</span><span class="af-sub">彭氏风格筛选</span></div>
+      <div class="af-arrow">→</div>
+      <div class="af-block"><span class="af-num">04</span><span class="af-text">落地制作</span><span class="af-sub">扎制裱糊彩绘</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 4. 灯彩作品展厅 ==================== -->
+<section class="scene-gallery" id="scene-gallery" aria-labelledby="gallery-title">
+  <header class="section-header">
+    <span class="section-num">叁</span>
+    <h2 class="section-title" id="gallery-title">作品展厅 / Gallery</h2>
+    <p class="section-desc">彭氏灯彩百年传承的代表作品与现代 AIGC 创新衍生。点击作品放大查看细节，悬停让灯通电点亮。</p>
+  </header>
+
+  <!-- 分类筛选 -->
+  <div class="gallery-filter">
+    <button class="gfilter is-active" data-filter="all">全部作品</button>
+    <button class="gfilter" data-filter="traditional">传统老灯彩</button>
+    <button class="gfilter" data-filter="festival">现代大型灯组</button>
+    <button class="gfilter" data-filter="aigc">AIGC 新创作</button>
+  </div>
+
+  <div class="gallery-grid" id="galleryGrid">
+    <article class="gallery-item" data-cat="traditional">
+      <div class="gallery-card">
+        <div class="gallery-img">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <radialGradient id="g-trad-1"><stop offset="0%" stop-color="#FFE4A8" stop-opacity="0.95"/><stop offset="60%" stop-color="#E8C268" stop-opacity="0.5"/><stop offset="100%" stop-color="#E8C268" stop-opacity="0"/></radialGradient>
+            </defs>
+            <rect width="400" height="400" fill="#0F0E0E"/>
+            <ellipse cx="200" cy="220" rx="140" ry="170" fill="url(#g-trad-1)" opacity="0.6"/>
+            <rect x="100" y="80" width="200" height="240" fill="#C8102E" rx="8"/>
+            <rect x="120" y="100" width="160" height="200" fill="#E8C268"/>
+            <text x="200" y="170" text-anchor="middle" font-family="Noto Serif SC, serif" font-weight="900" font-size="48" fill="#C8102E">福</text>
+            <text x="200" y="230" text-anchor="middle" font-family="Noto Serif SC, serif" font-weight="900" font-size="48" fill="#C8102E">寿</text>
+            <line x1="200" y1="80" x2="200" y2="60" stroke="#5A5652" stroke-width="2"/>
+            <line x1="200" y1="320" x2="200" y2="340" stroke="#5A5652" stroke-width="2"/>
+            <circle cx="200" cy="350" r="6" fill="#C8102E"/>
+          </svg>
+        </div>
+        <div class="gallery-info">
+          <span class="gallery-cat">传统老灯彩</span>
+          <h4 class="gallery-name">「福寿双全」方形宫灯</h4>
+          <p class="gallery-meta">1950s · 第二代传人彭福临制</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="gallery-item" data-cat="traditional">
+      <div class="gallery-card">
+        <div class="gallery-img">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="400" height="400" fill="#0F0E0E"/>
+            <ellipse cx="200" cy="220" rx="130" ry="160" fill="#C8102E" opacity="0.35"/>
+            <ellipse cx="200" cy="220" rx="100" ry="140" fill="#E8C268"/>
+            <line x1="200" y1="60" x2="200" y2="380" stroke="#C8102E" stroke-width="2" opacity="0.5"/>
+            <line x1="80" y1="220" x2="320" y2="220" stroke="#C8102E" stroke-width="2" opacity="0.5"/>
+            <ellipse cx="200" cy="220" rx="100" ry="140" fill="none" stroke="#C8102E" stroke-width="3"/>
+            <ellipse cx="200" cy="140" rx="60" ry="20" fill="none" stroke="#C8102E" stroke-width="2"/>
+            <ellipse cx="200" cy="300" rx="60" ry="20" fill="none" stroke="#C8102E" stroke-width="2"/>
+            <circle cx="200" cy="220" r="35" fill="#C8102E"/>
+            <text x="200" y="232" text-anchor="middle" font-family="Noto Serif SC, serif" font-weight="900" font-size="32" fill="#E8C268">吉</text>
+          </svg>
+        </div>
+        <div class="gallery-info">
+          <span class="gallery-cat">传统老灯彩</span>
+          <h4 class="gallery-name">「吉祥如意」圆形纱灯</h4>
+          <p class="gallery-meta">1972 · 庙会供奉款</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="gallery-item" data-cat="traditional">
+      <div class="gallery-card">
+        <div class="gallery-img">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="400" height="400" fill="#0F0E0E"/>
+            <polygon points="80,200 200,80 320,200 200,320" fill="#C8102E" opacity="0.4"/>
+            <polygon points="120,200 200,120 280,200 200,280" fill="#E8C268"/>
+            <line x1="120" y1="200" x2="280" y2="200" stroke="#C8102E" stroke-width="2"/>
+            <line x1="200" y1="120" x2="200" y2="280" stroke="#C8102E" stroke-width="2"/>
+            <line x1="135" y1="135" x2="265" y2="265" stroke="#C8102E" stroke-width="1" opacity="0.6"/>
+            <line x1="135" y1="265" x2="265" y2="135" stroke="#C8102E" stroke-width="1" opacity="0.6"/>
+            <circle cx="200" cy="200" r="20" fill="#C8102E"/>
+          </svg>
+        </div>
+        <div class="gallery-info">
+          <span class="gallery-cat">传统老灯彩</span>
+          <h4 class="gallery-name">「八卦瑞兽」菱形灯</h4>
+          <p class="gallery-meta">1985 · 第三代传人彭志远制</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="gallery-item" data-cat="festival">
+      <div class="gallery-card">
+        <div class="gallery-img">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="400" height="400" fill="#0F0E0E"/>
+            <circle cx="200" cy="220" r="120" fill="#E8C268" opacity="0.5"/>
+            <ellipse cx="200" cy="220" rx="110" ry="80" fill="#C8102E"/>
+            <path d="M 90 220 Q 90 130 200 130 Q 310 130 310 220 Q 310 280 200 280 Q 90 280 90 220 Z" fill="none" stroke="#E8C268" stroke-width="3"/>
+            <path d="M 130 180 Q 200 130 270 180 Q 200 220 130 180 Z" fill="#E8C268" opacity="0.7"/>
+            <circle cx="160" cy="190" r="6" fill="#C8102E"/>
+            <circle cx="200" cy="180" r="6" fill="#C8102E"/>
+            <circle cx="240" cy="190" r="6" fill="#C8102E"/>
+            <path d="M 170 230 Q 200 250 230 230" fill="none" stroke="#C8102E" stroke-width="2"/>
+            <line x1="200" y1="80" x2="200" y2="120" stroke="#5A5652" stroke-width="3"/>
+            <line x1="200" y1="290" x2="200" y2="340" stroke="#5A5652" stroke-width="3"/>
+          </svg>
+        </div>
+        <div class="gallery-info">
+          <span class="gallery-cat">现代大型灯组</span>
+          <h4 class="gallery-name">「金玉满堂」大型灯组</h4>
+          <p class="gallery-meta">2018 · 哈尔滨冰雪灯会主灯</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="gallery-item" data-cat="festival">
+      <div class="gallery-card">
+        <div class="gallery-img">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="400" height="400" fill="#0F0E0E"/>
+            <rect x="100" y="120" width="200" height="180" fill="#C8102E" rx="10"/>
+            <rect x="120" y="140" width="160" height="140" fill="#E8C268" rx="6"/>
+            <rect x="135" y="155" width="130" height="20" fill="#C8102E"/>
+            <rect x="135" y="185" width="130" height="20" fill="#C8102E"/>
+            <rect x="135" y="215" width="130" height="20" fill="#C8102E"/>
+            <rect x="135" y="245" width="130" height="20" fill="#C8102E"/>
+            <rect x="190" y="100" width="20" height="20" fill="#7A7672"/>
+            <rect x="190" y="300" width="20" height="20" fill="#7A7672"/>
+          </svg>
+        </div>
+        <div class="gallery-info">
+          <span class="gallery-cat">现代大型灯组</span>
+          <h4 class="gallery-name">「朱门锦户」门楼灯组</h4>
+          <p class="gallery-meta">2020 · 兰西县春节灯展</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="gallery-item" data-cat="festival">
+      <div class="gallery-card">
+        <div class="gallery-img">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="400" height="400" fill="#0F0E0E"/>
+            <ellipse cx="200" cy="220" rx="150" ry="100" fill="#C8102E" opacity="0.7"/>
+            <path d="M 100 220 Q 100 160 200 140 Q 300 160 300 220 Q 300 270 200 290 Q 100 270 100 220 Z" fill="#C8102E"/>
+            <circle cx="200" cy="210" r="50" fill="#E8C268"/>
+            <text x="200" y="225" text-anchor="middle" font-family="Noto Serif SC, serif" font-weight="900" font-size="40" fill="#C8102E">春</text>
+            <line x1="200" y1="90" x2="200" y2="140" stroke="#5A5652" stroke-width="3"/>
+            <line x1="200" y1="290" x2="200" y2="350" stroke="#5A5652" stroke-width="3"/>
+            <circle cx="100" cy="220" r="6" fill="#E8C268"/>
+            <circle cx="300" cy="220" r="6" fill="#E8C268"/>
+            <circle cx="200" cy="120" r="6" fill="#E8C268"/>
+            <circle cx="200" cy="310" r="6" fill="#E8C268"/>
+          </svg>
+        </div>
+        <div class="gallery-info">
+          <span class="gallery-cat">现代大型灯组</span>
+          <h4 class="gallery-name">「春回大地」鼓型灯组</h4>
+          <p class="gallery-meta">2022 · 哈尔滨冰雪大世界</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="gallery-item" data-cat="aigc">
+      <div class="gallery-card">
+        <div class="gallery-img gallery-aigc-img">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="ai1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#C8102E"/><stop offset="50%" stop-color="#E8C268"/><stop offset="100%" stop-color="#6B2C7C"/></linearGradient>
+            </defs>
+            <rect width="400" height="400" fill="#0F0E0E"/>
+            <polygon points="200,60 340,200 200,340 60,200" fill="url(#ai1)" opacity="0.85"/>
+            <polygon points="200,110 290,200 200,290 110,200" fill="#0F0E0E"/>
+            <circle cx="200" cy="200" r="40" fill="url(#ai1)"/>
+            <text x="200" y="210" text-anchor="middle" font-family="Noto Serif SC, serif" font-weight="900" font-size="32" fill="#F5EFE6C8">灵</text>
+            <circle cx="80" cy="80" r="3" fill="#E8C268"/>
+            <circle cx="320" cy="80" r="3" fill="#E8C268"/>
+            <circle cx="80" cy="320" r="3" fill="#E8C268"/>
+            <circle cx="320" cy="320" r="3" fill="#E8C268"/>
+          </svg>
+          <span class="aigc-tag">AIGC</span>
+        </div>
+        <div class="gallery-info">
+          <span class="gallery-cat">AIGC 新创作</span>
+          <h4 class="gallery-name">「灵韵四方」菱形紫光灯</h4>
+          <p class="gallery-meta">2026 · 本毕设 AIGC 衍生 · SD 训练</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="gallery-item" data-cat="aigc">
+      <div class="gallery-card">
+        <div class="gallery-img gallery-aigc-img">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <radialGradient id="ai2"><stop offset="0%" stop-color="#E8C268"/><stop offset="50%" stop-color="#C8102E"/><stop offset="100%" stop-color="#6B2C7C"/></radialGradient>
+            </defs>
+            <rect width="400" height="400" fill="#0F0E0E"/>
+            <circle cx="200" cy="200" r="140" fill="url(#ai2)" opacity="0.7"/>
+            <circle cx="200" cy="200" r="80" fill="#0F0E0E"/>
+            <g stroke="#E8C268" stroke-width="2" fill="none">
+              <path d="M 200 120 Q 280 200 200 280 Q 120 200 200 120"/>
+              <path d="M 120 200 Q 200 120 280 200 Q 200 280 120 200"/>
+              <circle cx="200" cy="200" r="30"/>
+            </g>
+            <circle cx="200" cy="200" r="12" fill="#E8C268"/>
+          </svg>
+          <span class="aigc-tag">AIGC</span>
+        </div>
+        <div class="gallery-info">
+          <span class="gallery-cat">AIGC 新创作</span>
+          <h4 class="gallery-name">「极光锦鲤」圆形纹样灯</h4>
+          <p class="gallery-meta">2026 · 本毕设 AIGC 衍生 · ControlNet</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="gallery-item" data-cat="aigc">
+      <div class="gallery-card">
+        <div class="gallery-img gallery-aigc-img">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="400" height="400" fill="#0F0E0E"/>
+            <g transform="translate(200,200)">
+              <g fill="none" stroke-width="3" stroke-linecap="round">
+                <circle r="120" stroke="#C8102E"/>
+                <circle r="90" stroke="#E8C268"/>
+                <circle r="60" stroke="#6B2C7C"/>
+                <path d="M -120 0 L 120 0" stroke="#E8C268"/>
+                <path d="M 0 -120 L 0 120" stroke="#E8C268"/>
+                <path d="M -85 -85 L 85 85" stroke="#C8102E"/>
+                <path d="M -85 85 L 85 -85" stroke="#C8102E"/>
+              </g>
+              <circle r="20" fill="#C8102E"/>
+            </g>
+          </svg>
+          <span class="aigc-tag">AIGC</span>
+        </div>
+        <div class="gallery-info">
+          <span class="gallery-cat">AIGC 新创作</span>
+          <h4 class="gallery-name">「叠彩纹章」抽象纹样灯</h4>
+          <p class="gallery-meta">2026 · 本毕设 AIGC 衍生 · LoRA</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ==================== 5. 光影交互体验 ==================== -->
+<section class="scene-maker" id="scene-maker" aria-labelledby="maker-title">
+  <header class="section-header">
+    <span class="section-num">肆</span>
+    <h2 class="section-title" id="maker-title">光影交互体验 / AIGC Maker</h2>
+    <p class="section-desc">亲自动手搭配一盏属于你的彭氏灯彩——选择骨架形态、纹样主题、配色方案与发光强度，实时预览你专属的非遗数字灯彩。</p>
+  </header>
+
+  <div class="maker-workspace">
+    <!-- 左侧：实时预览 -->
+    <div class="maker-preview">
+      <div class="preview-frame">
+        <svg class="preview-svg" viewBox="0 0 360 480" xmlns="http://www.w3.org/2000/svg" aria-label="灯彩实时预览">
+          <!-- 灯光发光层 -->
+          <g class="preview-glow" id="previewGlow" opacity="0.85">
+            <circle cx="180" cy="240" r="140" :fill="colorRgba" />
+          </g>
+          <!-- 灯笼主体 -->
+          <g class="preview-body" id="previewBody">
+            <!-- 骨架 -->
+            <g class="preview-frame" id="previewFrameShape"></g>
+            <!-- 纹样 -->
+            <g class="preview-pattern" id="previewPattern"></g>
+            <!-- 上下盖 -->
+            <g class="preview-cap">
+              <rect x="170" y="100" width="20" height="14" fill="#7A7672"/>
+              <rect x="170" y="370" width="20" height="14" fill="#7A7672"/>
+            </g>
+            <!-- 流苏 -->
+            <g class="preview-tassel">
+              <line x1="180" y1="384" x2="180" y2="430" stroke="#7A7672" stroke-width="2"/>
+              <circle cx="180" cy="436" r="8" fill="#C8102E"/>
+            </g>
+          </g>
+          <!-- 签名 -->
+          <text x="180" y="470" text-anchor="middle" font-family="Noto Serif SC, serif" font-weight="500" font-size="14" fill="#7A7672" id="previewSignature">—— 你的专属灯彩 ——</text>
+        </svg>
+      </div>
+      <div class="preview-info">
+        <p class="preview-name" id="previewName">未命名 · 基础款</p>
+        <p class="preview-config" id="previewConfig">圆球骨架 · 祥云纹 · 朱红配色</p>
+        <div class="preview-actions">
+          <button class="pbtn pbtn-ghost" id="previewReset">重置</button>
+          <button class="pbtn pbtn-primary" id="previewSave">收藏我的灯彩 ♥</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右侧：选择器 -->
+    <div class="maker-controls">
+      <!-- 骨架 -->
+      <div class="control-group">
+        <h4 class="cg-title"><span class="cg-num">01</span>选择骨架形态</h4>
+        <div class="cg-options" data-control="frame">
+          <button class="cg-option is-active" data-value="ball"><span class="co-icon">●</span><span class="co-name">圆球</span></button>
+          <button class="cg-option" data-value="barrel"><span class="co-icon">⬭</span><span class="co-name">桶形</span></button>
+          <button class="cg-option" data-value="hex"><span class="co-icon">⬡</span><span class="co-name">六角</span></button>
+          <button class="cg-option" data-value="diamond"><span class="co-icon">◆</span><span class="co-name">菱形</span></button>
+          <button class="cg-option" data-value="gourd"><span class="co-icon">⌬</span><span class="co-name">葫芦</span></button>
+        </div>
+      </div>
+
+      <!-- 纹样 -->
+      <div class="control-group">
+        <h4 class="cg-title"><span class="cg-num">02</span>选择纹样主题</h4>
+        <div class="cg-options" data-control="pattern">
+          <button class="cg-option is-active" data-value="cloud"><span class="co-icon">☁</span><span class="co-name">祥云</span></button>
+          <button class="cg-option" data-value="fish"><span class="co-icon">魚</span><span class="co-name">锦鲤</span></button>
+          <button class="cg-option" data-value="dragon"><span class="co-icon">龍</span><span class="co-name">瑞龙</span></button>
+          <button class="cg-option" data-value="phoenix"><span class="co-icon">鳳</span><span class="co-name">凤凰</span></button>
+          <button class="cg-option" data-value="bat"><span class="co-icon">蝠</span><span class="co-name">福蝠</span></button>
+        </div>
+      </div>
+
+      <!-- 配色 -->
+      <div class="control-group">
+        <h4 class="cg-title"><span class="cg-num">03</span>选择配色方案</h4>
+        <div class="cg-options cg-options-color" data-control="color">
+          <button class="cg-option-color is-active" data-value="red" style="--c:#C8102E"><span class="co-name">朱红</span></button>
+          <button class="cg-option-color" data-value="gold" style="--c:#E8C268"><span class="co-name">暖金</span></button>
+          <button class="cg-option-color" data-value="purple" style="--c:#6B2C7C"><span class="co-name">紫韵</span></button>
+          <button class="cg-option-color" data-value="green" style="--c:#2E7D5B"><span class="co-name">松绿</span></button>
+          <button class="cg-option-color" data-value="ink" style="--c:#2A2A2A"><span class="co-name">水墨</span></button>
+        </div>
+      </div>
+
+      <!-- 光强 -->
+      <div class="control-group">
+        <h4 class="cg-title"><span class="cg-num">04</span>调节发光强度</h4>
+        <div class="cg-slider">
+          <input type="range" id="lightSlider" min="0" max="100" value="75" aria-label="发光强度">
+          <span class="slider-value" id="lightValue">75%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 已收藏 -->
+  <div class="maker-collection" id="makerCollection" hidden>
+    <h4 class="collection-title">我收藏的灯彩 <span class="collection-count" id="collectionCount">0</span></h4>
+    <div class="collection-list" id="collectionList"></div>
+  </div>
+</section>
+
+<!-- ==================== 6. 传承与展望 ==================== -->
+<section class="scene-heritage" id="scene-heritage" aria-labelledby="heritage-title">
+  <header class="section-header">
+    <span class="section-num">伍</span>
+    <h2 class="section-title" id="heritage-title">传承与展望 / Heritage &amp; Future</h2>
+    <p class="section-desc">彭氏灯彩正站在传统与未来的交汇点上。本节呈现非遗保护的当下现状、数字化传承的创新路径，以及 AIGC 技术为百年灯彩注入的新可能。</p>
+  </header>
+
+  <!-- 现状统计 -->
+  <div class="heritage-stats">
+    <div class="stat-block">
+      <span class="stat-num">120<small>+</small></span>
+      <span class="stat-label">年传承</span>
+      <p class="stat-desc">彭氏灯彩自清末传承至今已逾百载</p>
+    </div>
+    <div class="stat-block">
+      <span class="stat-num">4</span>
+      <span class="stat-label">代传人</span>
+      <p class="stat-desc">从彭祖 → 彭福临 → 彭志远 → 彭悦</p>
+    </div>
+    <div class="stat-block">
+      <span class="stat-num">12</span>
+      <span class="stat-label">道工序</span>
+      <p class="stat-desc">从选材到成品需经十二道传统工序</p>
+    </div>
+    <div class="stat-block">
+      <span class="stat-num">200<small>+</small></span>
+      <span class="stat-label">件作品</span>
+      <p class="stat-desc">现存馆藏及传习所作品两百余件</p>
+    </div>
+  </div>
+
+  <!-- 双重路径 -->
+  <div class="heritage-dual">
+    <div class="dual-card dual-traditional">
+      <div class="dual-icon">
+        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="80" height="80" fill="none"/>
+          <rect x="20" y="20" width="40" height="40" fill="none" stroke="#C8102E" stroke-width="2"/>
+          <rect x="30" y="30" width="20" height="20" fill="#C8102E"/>
+          <line x1="40" y1="10" x2="40" y2="20" stroke="#C8102E" stroke-width="2"/>
+          <line x1="40" y1="60" x2="40" y2="70" stroke="#C8102E" stroke-width="2"/>
+        </svg>
+      </div>
+      <h3 class="dual-title">传统路径 · 活态传承</h3>
+      <ul class="dual-list">
+        <li><strong>传习所制度</strong> · 彭氏家族每周开放传习所，由第四代传人彭悦亲自指导学员</li>
+        <li><strong>校园合作</strong> · 与哈尔滨师范大学、东北农业大学合作开设非遗选修课</li>
+        <li><strong>节庆回归</strong> · 每年元宵、中秋在兰西县文化广场举办公益灯展</li>
+        <li><strong>口述史档案</strong> · 系统性录制老艺人工艺流程，保存于黑龙江省非遗中心</li>
+      </ul>
+    </div>
+
+    <div class="dual-card dual-digital">
+      <div class="dual-icon">
+        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="80" height="80" fill="none"/>
+          <circle cx="40" cy="40" r="25" fill="none" stroke="#E8C268" stroke-width="2"/>
+          <circle cx="40" cy="40" r="15" fill="none" stroke="#E8C268" stroke-width="2"/>
+          <circle cx="40" cy="40" r="5" fill="#E8C268"/>
+          <line x1="40" y1="5" x2="40" y2="15" stroke="#E8C268" stroke-width="1.5"/>
+          <line x1="40" y1="65" x2="40" y2="75" stroke="#E8C268" stroke-width="1.5"/>
+          <line x1="5" y1="40" x2="15" y2="40" stroke="#E8C268" stroke-width="1.5"/>
+          <line x1="65" y1="40" x2="75" y2="40" stroke="#E8C268" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <h3 class="dual-title">数字路径 · AIGC 赋能</h3>
+      <ul class="dual-list">
+        <li><strong>纹样数据库</strong> · 整理彭氏四代传承的 600+ 传统纹样，建立可检索的数字档案</li>
+        <li><strong>AIGC 模型训练</strong> · 基于 LoRA 微调 Stable Diffusion，生成符合彭氏色彩语言的纹样草图</li>
+        <li><strong>数字交互体验</strong> · 本毕设即为 AIGC + 非遗结合的探索案例</li>
+        <li><strong>线上展览</strong> · 通过 VR / AR 技术让全国观众「云逛」彭氏灯彩传习所</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 致谢与项目说明 -->
+  <div class="heritage-thanks">
+    <h3 class="thanks-title">致 谢 · Acknowledgments</h3>
+    <p class="thanks-text">本毕业设计的完成，离不开彭氏灯彩第四代传人 <strong>彭悦老师</strong> 的工艺指导与文献支持；感谢黑龙江省非物质文化遗产保护中心提供的历史档案；感谢哈尔滨师范大学传媒学院数字媒体艺术系全体师生的宝贵意见。</p>
+    <div class="thanks-meta">
+      <div class="tmeta-item"><span class="tmi-label">项目</span><span class="tmi-value">兰西彭氏灯彩 · 数字交互</span></div>
+      <div class="tmeta-item"><span class="tmi-label">类型</span><span class="tmi-value">毕业设计 · 数字媒体艺术</span></div>
+      <div class="tmeta-item"><span class="tmi-label">年份</span><span class="tmi-value">2026</span></div>
+      <div class="tmeta-item"><span class="tmi-label">技术栈</span><span class="tmi-value">HTML · CSS · JavaScript · AIGC</span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ==================== 页脚 ==================== -->
+<footer class="footer">
+  <div class="footer-seal"><span>彭</span></div>
+  <p class="footer-text">黑龙江省兰西县彭氏灯彩 · 数字交互毕业设计</p>
+  <p class="footer-meta">© 2026 · 黑土地上的光影非遗 · 仅供学术展示</p>
+</footer>
+
+<!-- 灯彩放大查看 Modal -->
+<div class="gallery-modal" id="galleryModal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-mask" id="modalMask"></div>
+  <div class="modal-card">
+    <button class="modal-close" id="modalClose" aria-label="关闭">×</button>
+    <div class="modal-img" id="modalImg"></div>
+    <div class="modal-info">
+      <span class="modal-cat" id="modalCat"></span>
+      <h3 class="modal-name" id="modalName"></h3>
+      <p class="modal-meta" id="modalMeta"></p>
+      <p class="modal-desc" id="modalDesc"></p>
+    </div>
+  </div>
+</div>
+
+<!-- 全局 Toast -->
+<div class="global-toast" id="globalToast" hidden role="status" aria-live="polite"></div>
+
+</div>
+
+<script src="js/app.js?v=20260911-1712"></script>
+</body>
+</html>
